@@ -41,8 +41,9 @@ else
 
   command -v ninja >/dev/null || sudo apt-get install ninja-build
   command -v lld >/dev/null || sudo apt-get install lld
+  echo 1111
 fi
-
+lld --version
 build() {
   cd rust
   python3 ./x.py --config "../config-${OS}.toml" --host $TRIPLE install
